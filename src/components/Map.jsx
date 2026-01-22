@@ -14,7 +14,6 @@ export default function Map() {
         loading="lazy"
       ></iframe>
 
-      {/* Review link BELOW the map */}
       <div className="mt-4">
         <GoogleReviewLink />
       </div>

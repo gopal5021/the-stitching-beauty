@@ -16,18 +16,15 @@ export default function Navbar() {
 
   return (
     <nav className="bg-pink-600 text-white sticky top-0 z-50">
-      {/* TOP BAR */}
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         
-        {/* BRANDING (UNCHANGED LOOK) */}
         <h1 className="text-xl font-bold">
           The Stitching Beauty
           <span className="text-sm italic font-normal text-pink-100">
-            {" "}– Mrs. Pallavi Ramakant Soni
+            {" "}– by Mrs. Pallavi Ramakant Soni
           </span>
         </h1>
 
-        {/* DESKTOP LINKS (UNCHANGED) */}
         <div className="hidden md:flex space-x-4 text-sm">
           <NavLink to="/" end className={({ isActive }) => isActive ? activeDesktop : normalDesktop}>
             Home
@@ -46,7 +43,6 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        {/* HAMBURGER (MOBILE ONLY) */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
@@ -55,7 +51,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
       {open && (
         <div className="md:hidden bg-pink-700 px-4 pb-4 text-sm">
           <NavLink onClick={() => setOpen(false)} to="/" end className={({ isActive }) => isActive ? activeMobile : normalMobile}>
